@@ -1,6 +1,8 @@
 
 # Simple Shell
 Simple Shell is a simple implementation of the UNIX command interpreter project for ALX school students, where we build and understand how the simple shell command works. The project is to replicate the basic functionality of a LINUX Shell
+<img with = "150" src ="https://github.com/Giddyspurz/simple_shell/blob/master/imag/LOGO.png" />
+
 
 ## Learning Objectives
 
