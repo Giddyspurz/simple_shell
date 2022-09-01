@@ -1,6 +1,6 @@
 
 # Simple Shell
-Simple Shell is a simple implementation of the UNIX command interpreter project for Holberton school students, where we build and understand how the simple shell command works. The project is to replicate the basic functionality of a LINUX Shell
+Simple Shell is a simple implementation of the UNIX command interpreter project for ALX school students, where we build and understand how the simple shell command works. The project is to replicate the basic functionality of a LINUX Shell
 
 ## Learning Objectives
 
