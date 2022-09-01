@@ -56,7 +56,7 @@ Simple Shell is a simple implementation of the UNIX command interpreter project 
 
 simple_shell is clone in your terminal using the next code
 
-git clone https://github.com/oimoralest/simple_shell.git
+git clone: https://github.com/Giddyspurz/simple_shell
 
 ## How to Copile the code
 
@@ -117,5 +117,5 @@ $ /bin/pwd
 ```
 
 ## Authors
-Gad Chege
-Jesse Momanyi
+Gad Chege<br>
+Jesse Momanyi<br>
