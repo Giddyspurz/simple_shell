@@ -1,28 +1,27 @@
 #include "header.h"
 /**
- * _print_b - convert a decimal in a base 2
+ * _print_o - convert a decimal in a base 8
  *  @flist: list of arguments int
  *  Return: len
  */
-int _print_b(va_list flist)
+int _print_o(va_list flist)
 {
-	long int base = 2;
+	long int base = 8;
 	long int n = (long int)va_arg(flist, unsigned int);
 	int c = 1, len = 0;
 	char w = '\0';
 
-	if (n < 2)
+	if (n < 8)
 	{
-		w = n == 0 ? '0' : '1';
-		write(1, &w, 1);
+		w = n + '0', write(1, &w, 1);
 	}
 	else
 	{
 		while (c > 0)
 		{
-			if ((n / base) >= 2)
+			if ((n / base) >= 8)
 			{
-				base *= 2;
+				base *= 8;
 				c++;
 			}
 			else
@@ -30,7 +29,7 @@ int _print_b(va_list flist)
 				w = (n / base) + '0';
 				write(1, &w, 1);
 				n %= base;
-				base /= 2;
+				base /= 8;
 				len++;
 				c--;
 			}

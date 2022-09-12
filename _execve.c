@@ -1,5 +1,3 @@
-
-
 #include "header.h"
 /**
  * free_commands - frees the command's list

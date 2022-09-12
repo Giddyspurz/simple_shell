@@ -1,0 +1,105 @@
+.TH man 1 "17 August 2020" "0.1" "simple_shell man page"
+
+.SH NAME
+.B simple_shell
+- is a simple version of a command interpreter (shell)
+
+.SH SYNOPSIS
+.Nm
+.Op Fl a Ar path        -  [-a path]
+.Op Ar file             -  [arg]
+.Op Ar                  -  [arg ...]
+arg2 ...                -  Arguments./hsh [options] (file)
+
+.SH DESCRIPTION
+.B Simple_Shell
+is a simple implementation of the standard commands interpreter that executes and read from the standard input. Only some standard shell commands are incorporated.
+
+.SS Overview
+.B The simple_shell
+is a command that reads "lines" from either a file
+or the terminal, interprets them,
+and executes other commands availables.
+
+.SS Invocation
+The program simple shell is invoked using.
+
+.PA ./hsh
+We need to stay in the terminal before each command. It reads commands from standard input.
+
+.SS Lexical Structure
+reads input and lines from a file and divides them into words at whitespace.
+
+.SS Commands
+The first word is considered to be a command, following words are arguments which need not expansion.
+The following commands are valid:
+
+.IT
+.B pwd
+- prints the name of the current working directory
+
+.B ls
+- list the contents of the directory
+
+.B echo
+- shows a line of text specified to stdout
+
+.B env
+- display the environment variables and their values
+
+.B setenv
+-   A command which will set environmental variable
+
+.B unsetenv
+-   Unsets environmental variable
+
+.B exit
+-   Exits from the shell, it takes unsigned int as a
+.B exit status
+
+.ss Search and Execution
+This simple shell has two ways to search for the commands, built-in and programs included in the directory by path, if the command does not match a defined function, the command is searched like a normal program in the file system.
+
+.SS Path Search
+When locating a command, the shell first looks to see if it has a shell function by that name.  Then it looks for a builtin command by that name.
+If a builtin command is not found, one of two things happen:
+.IT
+command names that contain a slash are executed without searching.
+.IT
+The shell searches one entry at time for command.
+
+.Sh ARGUMENTS
+THe first argument always assumed to be the name of a file containing executes commnads from this file, then exit.
+
+.Sh BUILTING COMMANDS
+this section lists the built-in commands that are needed to perform some operations.
+This is the list of builting commands with their descriptions:
+.Bl -tag -width -indent   /* Begins a tagged list
+.It Fl cd                 /* -a flag as a list item
+The cd command change the simple_shell working directory
+
+.SH COMPILATION
+
+simple_shell still does not have an execution file or does'nt exits , it is necessary  make a compilation process from the .c, this process is recommended to do it with the GNU Compiler Collection in ubuntu 14.04 with gcc-4.8 and you must enter the following line:
+.P
+.RS
+.B $ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+.P
+.RE
+after the compilation process, your compiled file is hsh and should work typing the following line followed by an ENTER:
+.P
+.RS
+.B $ ./hsh
+.P
+.RE
+non-interactive mode:
+.P
+.RS
+.B $ echo "/bin/ls" | ./hsh
+
+.Sh REFERENCES
+see also -I sh(2), bash(2), zsh(2), powershell(1)
+
+.Sh AUTHORS
+Oscar Morales
+Luis Carvajal
